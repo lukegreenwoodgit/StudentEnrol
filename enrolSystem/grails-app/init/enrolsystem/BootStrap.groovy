@@ -15,6 +15,7 @@ class BootStrap {
 	fees:9000,
 	studyMode:'Full-time'
 	).save()
+	
 	def module = new Module(
 	title:'System Architectures',
 	code:'COMP145',
@@ -23,9 +24,8 @@ class BootStrap {
 	description:'''System Architectures module for Computing Course''',
 	course:'computing'
 	).save()
-    }
-    def destroy = {
-	def lectruer = new Lectruer(
+	
+	def lecturer = new Lecturer(
 	fullName:'Dr Tonderai Maswera',
 	post:'Lecturer',
 	subject:'Web Applications',
@@ -33,5 +33,7 @@ class BootStrap {
 	office:'Cantor-9417',
 	bio:'''I am Tonderai'''
 	).save()
+    }
+    def destroy = {
     }
 }
